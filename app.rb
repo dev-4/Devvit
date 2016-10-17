@@ -1,13 +1,14 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'sqlite3'
 require './models'
 
-# set :database, "sqlite3:uncubed.sqlite3"
+set :database, {adapter: 'sqlite3', database: 'devvit.sqlite3'}
 
-# get '/' do
-#   @companies = Company.all
-#   erb :home
-# end
+get '/' do
+  # @companies = Company.all
+  erb :home
+end
 
 # get '/company/new' do
 #   erb :new_company
