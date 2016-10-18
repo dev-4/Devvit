@@ -1,14 +1,7 @@
-# # seeds.rb
-# require './app'
+require './app'
 
+mike = User.create( username: 'dev.4')
+kevin = User.create( username: 'kplaza')
+post1 = Post.create( user_id: mike.id, content: 'My first post' )
 
-# # Create some companies and Jobs
-
-# ocean = Company.create(name: 'Digital Ocean', industry: 'infrastructure', size: 250 )
-# bark = Company.create(name: 'BarkBox', industry: 'retail', size: 200)
-
-# Job.create( company: ocean.id, title: 'Staff Engineer: Compute' )
-# Job.create( company: ocean.id, title: 'Technical Program Manager')
-# Job.create( company: bark.id, title: 'Freelance UX Designer')
-# Job.create( company: bark.id, title: 'Data Analyst')
-
+Comment.create( user_id: kevin.id, post_id: post1.id, content: 'Really? Take the time to write more, please.')
