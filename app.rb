@@ -6,20 +6,33 @@ require './models'
 set :database, {adapter: 'sqlite3', database: 'devvit.sqlite3'}
 
 get '/' do
-  # @companies = Company.all
+  # @users = User.all
   erb :home
+end
+
+get '/signup' do
+	erb :signup
+end
+
+get '/signin' do
+	erb :signin
+end
+
+get '/company/:id' do 
+  @company = User.find(params[:id])
+  erb :company_profile
 end
 
 # get '/company/new' do
 #   erb :new_company
 # end
 
-# post '/company/new' do
-#   # to do: accept this form data
-#   # and save out a new company
-#   @company = Company.create( params )
-#   erb :new_company
-# end
+post '/' do
+  # to do: accept this form data
+  # and save out a new company
+  @user = User.create( params )
+  erb :home
+end
 
 # get '/jobs' do
 #   @jobs = Job.all
