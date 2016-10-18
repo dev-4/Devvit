@@ -1,22 +1,16 @@
-# # Company Model
-# class User
+# models.rb
 
-#   def self.all
-#     command = `psql -d test -c "SELECT * FROM users"`
-#     sql_results_parser command
-#   end
+class User < ActiveRecord::Base
+	has_many :posts
+	has_many :comments
+end
 
-#   def self.sql_results_parser(command)
-#     #some code to parse what gets returned from the SQL command
-#   end
-  
-# end
+class Post < ActiveRecord::Base
+	belongs_to :user
+	has_many :comments
+end
 
-# class Company < ActiveRecord::Base
-#   has_many :jobs
-# end
-
-# # Job Model
-# class Job < ActiveRecord::Base
-#   belongs_to :company
-# end
+class Comment < ActiveRecord::Base
+	belongs_to :user
+	belongs_to :post
+end
