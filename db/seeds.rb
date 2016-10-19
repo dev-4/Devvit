@@ -1,7 +1,7 @@
 require './app'
 
-mike = User.create( username: 'dev.4')
-kevin = User.create( username: 'kplaza')
+mike = User.create( username: 'dev.4', email: 'dev4mc@gmail.com')
+kevin = User.create( username: 'kplaza', email: 'kplaza212@gmail.com')
 
 post1 = Post.create( user_id: mike.id, content: "I can't even" )
 post2 = Post.create( user_id: kevin.id, content: "This website is amazing!" )

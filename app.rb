@@ -1,7 +1,9 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sqlite3'
+require	'gravtastic'
 require './models'
+
 
 enable :sessions
 
