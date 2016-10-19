@@ -3,10 +3,11 @@ require 'sinatra/activerecord'
 require 'sqlite3'
 require './models'
 
+enable :sessions
+
 set :database, {adapter: 'sqlite3', database: 'devvit.sqlite3'}
 
 get '/' do
-  @users = User.all
   erb :home
 end
 
@@ -20,23 +21,15 @@ end
 
 get '/user/:id' do 
   @user = User.find(params[:id])
-  erb :account
+  erb :user
+end
+
+get '/thread/:id' do 
+  @post = Post.find(params[:id])
+  erb :thread
 end
 
 get '/post' do 
   @posts = Post.all
   erb :post
 end
-
-post '/post' do 
-  
-erb :post
-end
-
-# post '/' do
-#   # to do: accept this form data
-#   # and save out a new company
-#   @user = User.create( params )
-#   erb :home
-# end
-

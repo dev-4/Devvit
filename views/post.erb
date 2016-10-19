@@ -1,5 +1,5 @@
 <ol>
-<% @posts.each do |job| %>
-<li><% = post.content %></li>
+<% @posts.each do |post| %>
+<a href="/thread/<%= post.id %>"><li><%= post.content %><br><a href="/user/<%= post.user.id %>"><%= post.user.username %></a></li></a>
 <% end %>
 </ol>
