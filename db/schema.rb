@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20161017212846) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
+    t.string  "title"
     t.text    "content"
   end
 
