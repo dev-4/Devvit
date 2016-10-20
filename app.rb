@@ -40,9 +40,11 @@ end
 
 post '/signin' do 
 	@user = User.find_by(username: params[:username], password: params[:password])
+	# @user
 	session[:user_id] = @user.id
-
 	redirect '/post'
+# else
+# 	redirect '/signup'
 end
 
 get "/signout" do 
@@ -72,11 +74,21 @@ erb :account
 	end
 
 post '/update' do
-	@updated_user = User.update(username: params[:username], password: params[:password], email: params[:email])
-	@user = User.find_by(username: params[:username])
-	session[:user_id] = @user.id
+	# @user = User.find_by(username: params[:username])
+	@user = User.find(session[:user_id])
+	@user = @user.update(username: params[:username], password: params[:password], email: params[:email])
+	#session[:user_id] = @user.id
 
 redirect '/account'
 end
+
+get "/delete_account" do
+  @user = User.find(session[:user_id])
+  User.find(@user).destroy
+
+  redirect './'
+end
+
+
 
 
