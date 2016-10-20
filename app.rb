@@ -21,20 +21,16 @@ end
 get '/signup' do
 
 	erb :signup
-
 end
 
 post '/signup' do
 	@user = User.create(username: params[:username], password: params[:password], email: params[:email])
 	session[:user_id] = @user.id
 	puts @user
-
 	redirect '/post'
-
 end
 
 get '/signin' do
-
 
 	erb :signin
 end
@@ -48,10 +44,8 @@ post '/signin' do
 
 	else
 		redirect '/signup'
-		# puts "email or password incorrect"
+		
 	end
-	# redirect '/post'
-	
 end
 
 get "/signout" do 
@@ -76,17 +70,15 @@ erb :post
 end
 
 get '/account' do 
-@user = User.find(session[:user_id])
-erb :account
-	end
+	@user = User.find(session[:user_id])
+	erb :account
+end
 
 post '/update' do
-	# @user = User.find_by(username: params[:username])
+	
 	@user = User.find(session[:user_id])
 	@user = @user.update(username: params[:username], password: params[:password], email: params[:email])
-	#session[:user_id] = @user.id
-
-redirect '/account'
+	redirect '/account'
 end
 
 
