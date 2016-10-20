@@ -8,6 +8,11 @@ body {
 	text-align: center;
 	background-color: aliceblue;
 }
+
+
+.heading {
+	font-family: 'Pacifico', cursive;
+
 ol {
 	list-style-type: none;
 }

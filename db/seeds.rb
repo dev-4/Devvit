@@ -1,3 +1,4 @@
+
 require './app'
 
 mike = User.create( username: 'dev.4', email: 'dev4mc@gmail.com', password: 'carrots1')
@@ -16,3 +17,4 @@ post2 = Post.create( user_id: kevin.id, title: 'This website is amazing!', conte
 Comment.create( user_id: kevin.id, post_id: post1.id, content: 'Is this thread using Devkit v2.4.2? I really hope you are using it.')
 Comment.create( user_id: mike.id, post_id: post2.id, content: 'FYI, Devvit and devkit v2.4.2 are not related to me.')
 Comment.create( user_id: john.id, post_id: post1.id, content: 'Potatoes are not the future!')
+
