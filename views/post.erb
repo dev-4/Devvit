@@ -1,4 +1,3 @@
-
 <ol class="text-center">
 <% @posts.each do |post| %>
 <a class="thread" href="/thread/<%= post.id %>"><li><%= post.title %><br><a href="/user/<%= post.user.id if post.user %>"><%= post.user.username if post.user %></a></li></a>
