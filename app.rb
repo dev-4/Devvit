@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sqlite3'
 require './models'
+require 'sinatra/flash'
 
 set :database, {adapter: 'sqlite3', database: 'devvit.sqlite3'}
 
@@ -40,11 +41,17 @@ end
 
 post '/signin' do 
 	@user = User.find_by(username: params[:username], password: params[:password])
-	# @user
-	session[:user_id] = @user.id
-	redirect '/post'
-# else
-# 	redirect '/signup'
+	# session[:user_id] = @user.id
+		if @user &&@user.password == params[:password]
+		session[:user_id] = @user.id
+		redirect '/post'
+
+	else
+		redirect '/signup'
+		# puts "email or password incorrect"
+	end
+	# redirect '/post'
+	
 end
 
 get "/signout" do 
@@ -82,18 +89,15 @@ post '/update' do
 redirect '/account'
 end
 
-# get "/delete/:id" do
-#   @user = User.find(params[:id])
-# 	@user.destroy
 
-#   redirect '/'
-# end
 get "/delete_account" do
   @user = User.find(session[:user_id])
   User.find(@user).destroy
 
   redirect './'
 end
+
+
 
 
 
