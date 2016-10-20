@@ -5,3 +5,5 @@ gem 'rake'
 gem 'sinatra'
 gem 'activerecord'
 gem 'sinatra-activerecord'
+gem 'gravtastic'
+
