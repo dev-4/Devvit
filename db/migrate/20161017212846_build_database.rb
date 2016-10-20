@@ -9,6 +9,7 @@ class BuildDatabase < ActiveRecord::Migration[5.0]
 	  # post table
 	  create_table 'posts' do |t|
 	  	t.integer :user_id
+	  	t.string :title
 	  	t.text :content
 	  end
 	  # comment table
