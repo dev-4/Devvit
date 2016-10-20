@@ -12,12 +12,11 @@
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="/#">Devvit</a>
+	      <a class="navbar-brand" href="/">Devvit</a>
 	      <% if @user %>
 	      <a href="/post"><button type="button" class="btn btn-default navbar-btn pull-left">FeedME</button></a>
 	      <a href="/account"><button type="button" class="btn btn-default navbar-btn pull-left">Profile</button></a>
 	      <% end %>
-
 	    </div>
 	  	<% if @user %>
 	    <a href="/signout"><button type="button" class="btn btn-default navbar-btn pull-right">Log out</button></a>
@@ -28,11 +27,8 @@
 	    <p class="navbar-text pull-right"><%= "Whats up #{@user.username}?" if @user %> </p>
 	  </div>
 	</nav>
-	<img src="img/home.jpg">
+	<img src="/img/home.jpg">
 	<h1 class="heading">We are the CSS to your HTML</h1>
-	<br>
-
-
 </body>
 </html>
 <%= yield %>
