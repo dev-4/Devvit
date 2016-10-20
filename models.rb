@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 	has_many :posts
 	has_many :comments
 	include Gravtastic
-  gravtastic
+  gravtastic :default => :identicon
 end
 
 class Post < ActiveRecord::Base
