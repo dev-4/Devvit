@@ -1,7 +1,8 @@
+<br/>
 <ol class="text-center">
 <% @posts.each do |post| %>
 <a class="thread" href="/thread/<%= post.id %>"><li><%= post.title %><br><a href="/user/<%= post.user.id if post.user %>"><%= post.user.username if post.user %></a></li></a>
 <% end %>
-<a href="/newthread"><input class="text-center thread-btn" type="submit" value="Make a new thread" /></a>
+<a href="/newthread"><input class="btn btn-warning" type="submit" value="Make a new thread" /></a>
 </ol>
 
