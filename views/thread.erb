@@ -20,7 +20,7 @@
 		    <span <%= 'class="error" ' if @error %> id="console"><%= @msg %></span>
 		    <input type="hidden" name="post_id" value="<%= @post.id %>" />
 		    <br>
-		  	<textarea maxlength="255" cols="50" rows="10" name="message"></textarea>
+		  	<textarea maxlength="255" cols="50" rows="10" name="message" placeholder="Add to the Feed"></textarea>
 		  	<br>
 		  	<strong><span id="message-remaining"></span></strong>
 		  	<br>
