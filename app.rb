@@ -82,12 +82,21 @@ post '/update' do
 redirect '/account'
 end
 
+# get "/delete/:id" do
+#   @user = User.find(params[:id])
+# 	@user.destroy
+
+#   redirect '/'
+# end
 get "/delete_account" do
   @user = User.find(session[:user_id])
   User.find(@user).destroy
 
   redirect './'
 end
+
+
+
 
 
 
