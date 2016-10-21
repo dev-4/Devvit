@@ -2,7 +2,7 @@
 	<img src="/img/home.jpg"/>
 
 <br/>
-<h1 class="heading">The Feed...</h1>
+<h1 class="heading">&#160;&#160;&#160;&#160;&#160;The Feed...</h1>
 <ol class="text-center">
 <% @posts.each do |post| %>
 <a class="thread" href="/thread/<%= post.id %>"><li><%= post.title %><br><a href="/user/<%= post.user.id if post.user %>"><%= post.user.username if post.user %></a></li></a>
