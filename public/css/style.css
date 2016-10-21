@@ -19,6 +19,9 @@ li {
 .front-image {
 	box-shadow: 0 0.1px 5px;
 }
+.info {
+	font-family: 'Gloria Hallelujah', cursive;
+}
 .heading {
 	font-family: 'Pacifico', cursive;
 }
