@@ -49,7 +49,8 @@ get "/signout" do
 end
 
 get '/user/:id' do 
-  @user = User.find(params[:id])
+  @view_user = User.find(params[:id])
+  @user = User.find(session[:user_id])
   erb :user
 end
 
@@ -97,6 +98,7 @@ get "/delete_account" do
   User.find(@user).destroy
   redirect './'
 end
+
 
 
 
