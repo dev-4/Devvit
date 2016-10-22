@@ -3,7 +3,7 @@
 </p>
 <p align="center"><strong>Devvit Rails Blog</strong></p>
 ---
-## If you want to check it out
+# Installation and use:
 - Open **terminal** (Any terminal works but use **Git Bash** if you can)
 - **cd** into the Downtown Lover (**cd desktop**, **cd Devvit-master**)
 - Type **bundle install** (this will install the **rubygems** needed to make this website work)
