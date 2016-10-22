@@ -1,6 +1,10 @@
+/* Main Area */
 body {
 	background-image: url('../img/weather.png');
 	text-align: center;
+}
+ol, ul {
+	padding-left: 0;
 }
 ol {
 	list-style-type: none;
@@ -14,15 +18,21 @@ li {
 	padding-bottom: 5px;
 	border-radius: 10px;
 }
-ol, ul {
-	padding-left: 0;
-}
 a:hover {
     text-decoration: none;
 }
+/* ID */
 #front-image {
 	box-shadow: 0 0.1px 5px;
 	border-radius: 10px;
+}
+/* Class */
+.logo {
+	padding-top: 10px;
+	padding-right: 10px;
+}
+.gravatar {
+	border-radius: 50%;
 }
 .thread {
 	color: black;
@@ -53,6 +63,8 @@ a:hover {
 	margin: 5px 5px 0 5px;	
 	float: left;
 	padding: 0;
+	padding-top: 5px;
+	padding-left: 5px;
 	margin-top: 10px;
 	margin-left: 25.5%;
 }
@@ -90,8 +102,4 @@ a:hover {
 }
 .thread-btn {
 	color: black;
-}
-.logo {
-	padding-top: 10px;
-	padding-right: 10px;
 }

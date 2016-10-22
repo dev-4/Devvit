@@ -4,17 +4,14 @@ require 'sqlite3'
 require	'gravtastic'
 require './models'
 
-
 enable :sessions
 set :sessions => true
-
 set :database, {adapter: 'sqlite3', database: 'devvit.sqlite3'}
 
 get '/' do
 	@user = User.find(session[:user_id]) if session[:user_id]
   erb :home	
 end
-
 
 get '/signup' do
 	erb :signup

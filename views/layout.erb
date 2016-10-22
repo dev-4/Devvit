@@ -33,7 +33,7 @@
 	    	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img class="pull-left logo" alt="Brand" src="../img/logo.png"></a>
 	      <a class="navbar-brand" href="/">Devvit</a>
 	      <% if @user %>
-	      <a href="/post"><button type="button" class="btn btn-default navbar-btn pull-left">FeedME™</button></a>
+	      <a href="/post"><button type="button" class="btn btn-default navbar-btn pull-left">Feed ME™</button></a>
 	      <a href="/account"><button type="button" class="btn btn-default navbar-btn pull-left">Profile</button></a>
 	      <% end %>
 	    </div>
@@ -43,7 +43,7 @@
 	    <a href="/signin"><button type="button" class="btn btn-default navbar-btn pull-right">Sign in</button></a>
 	    <a href="/signup"><button type="button" class="btn btn-default navbar-btn pull-right">Sign up</button></a>
 	  	<% end %>
-	    <p class="navbar-text pull-right"><%= "Whats up #{@user.username}?" if @user %> </p>
+	    <p class="navbar-text pull-right"><%= "Welcome, #{@user.username}?" if @user %> </p>
 	  </div>
 	</nav>
 </body>
