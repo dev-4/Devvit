@@ -7,6 +7,6 @@
 - Open **terminal** (Download **Git** if you don't have it)
 - **cd** into the Downtown Lover (**cd desktop**, **cd Devvit-master**)
 - Type **bundle install** (this will install the **rubygems** needed to make this website work)
-- Type **ruby main.rb** to run the server (**localhost:4567**)
+- Type **ruby app.rb** to run the server (**localhost:4567**)
 - Go to **http://localhost:4567/**
 - Enjoy!
