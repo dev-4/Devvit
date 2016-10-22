@@ -1,13 +1,13 @@
 	<h1 class="heading">We are the CSS to your HTML</h1>
-	<br>
-	<img src="/img/home.jpg"/>
+	<img id="front-image" src="/img/home.jpg"/>
 
 <br/>
-<h1 class="heading">&#160;&#160;&#160;&#160;&#160;The Feed...</h1>
+<h1 class="heading">Feed</h1>
 <ol class="text-center">
 <% @posts.each do |post| %>
-<a class="thread" href="/thread/<%= post.id %>"><li><%= post.title %><br><a href="/user/<%= post.user.id if post.user %>"><%= post.user.username if post.user %></a></li></a>
+<a href="/thread/<%= post.id %>"><li><%= post.title %><br><a class="thread" href="/user/<%= post.user.id if post.user %>"><%= post.user.username if post.user %></a></li></a>
 <% end %>
-<a href="/newthread"><input class="btn btn-warning" type="submit" value="Make a new thread" /></a>
 </ol>
+<a href="/newthread"><input class="btn btn-warning" type="submit" value="Make a new thread" /></a>
+
 

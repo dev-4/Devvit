@@ -1,12 +1,10 @@
-	<h1 class="heading">We are the CSS to your HTML</h1>
-	<br>
-	<img src="/img/home.jpg"/>
-
-<h1 class="info">This Devitter is</h1>
-<div><img width="64px" src="<%= @user.gravatar_url %>" />
-<br>
-<h2 class="info">Username: <%= @view_user.username %>
-<br>
-E-mail: <%= @view_user.email %><
+<h1 class="heading">We are the CSS to your HTML</h1><br/>
+<img id="front-image" src="/img/home.jpg"/><br/><br/>
+<div class="devvitorian">
+	<h1 class="info">Devvitorian: </h1>
+	<img class="devvitorian-avatar" width="64px" src="<%= @user.gravatar_url %>" />
+		<br/>
+	<h2 class="info">Username: <%= @view_user.username %>
+		<br/>E-mail: <%= @view_user.email %>
+	</h2>
 </div>
-</h2>
