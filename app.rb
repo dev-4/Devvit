@@ -46,6 +46,7 @@ end
 
 get '/user/:id' do 
   @view_user = User.find(params[:id])
+  @view_post = Post.find(params[:id])
   @user = User.find(session[:user_id])
   erb :user
 end
