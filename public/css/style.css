@@ -28,17 +28,21 @@ a:hover {
 }
 /* Class */
 .logo {
-	padding-top: 10px;
-	padding-right: 10px;
+	padding-top: 8px;
+	padding-right: 5px;
 }
 .gravatar {
 	border-radius: 50%;
+	box-shadow: 0 0.1px 5px;
+	color: black;
 }
 .thread {
 	color: black;
 }
 .info {
+	font-size: 22px;
 	font-family: 'Gloria Hallelujah', cursive;
+	padding-bottom: 20px;
 }
 .heading {
 	font-family: 'Pacifico', cursive;
@@ -50,14 +54,15 @@ a:hover {
 	font-size: 32px;
 }
 .devvitorian {
-	border: 1px solid black;
+	box-shadow: 0 0.1px 5px;
 	border-radius: 10px;
 	background-color: white;
 	margin-left: 40%;
 	margin-right: 40%;
 }
 .devvitorian-avatar {
-	border: 3px solid black;
+	border-radius: 50%;
+	box-shadow: 0 1px 10px;
 }
 .post {
 	margin: 5px 5px 0 5px;	
