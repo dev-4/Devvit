@@ -54,11 +54,19 @@ a:hover {
 	font-size: 32px;
 }
 .devvitorian {
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 22px;
 	box-shadow: 0 0.1px 5px;
 	border-radius: 10px;
 	background-color: white;
 	margin-left: 40%;
 	margin-right: 40%;
+}
+.post-info {
+	font-size: 22px;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 .devvitorian-avatar {
 	border-radius: 50%;
