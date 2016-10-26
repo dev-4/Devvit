@@ -9,8 +9,10 @@ set :sessions => true
 set :database, {adapter: 'sqlite3', database: 'devvit.sqlite3'}
 
 get '/' do
-	@user = User.find(session[:user_id]) if session[:user_id]
-  erb :home	
+	if session[:user_id]
+		@user = User.find(session[:user_id]) if @user
+	end
+	erb :home
 end
 
 get '/signup' do
@@ -28,7 +30,7 @@ get '/signin' do
 	erb :signin
 end
 
-post '/signin' do 
+post '/signin' do
 	@user = User.find_by(username: params[:username], password: params[:password])
 		if @user &&@user.password == params[:password]
 		session[:user_id] = @user.id
@@ -39,19 +41,19 @@ post '/signin' do
 end
 
 get "/signout" do
-@session = session 
+@session = session
 @session.destroy
   redirect '/'
 end
 
-get '/user/:id' do 
+get '/user/:id' do
   @view_user = User.find(params[:id])
   @view_post = Post.find(params[:id])
   @user = User.find(session[:user_id])
   erb :user
 end
 
-get '/thread/:id' do 
+get '/thread/:id' do
 	@user = User.find(session[:user_id])
   @post = Post.find(params[:id])
   erb :thread
@@ -73,13 +75,13 @@ post '/thread' do
 	redirect "/thread/#{comment.post.id}"
 end
 
-get '/post' do 
+get '/post' do
   @posts = Post.all
   @user = User.find(session[:user_id])
   erb :post
 end
 
-get '/account' do 
+get '/account' do
 	@user = User.find(session[:user_id])
 	erb :account
 end
@@ -93,5 +95,5 @@ end
 get "/delete_account" do
   @user = User.find(session[:user_id])
   User.find(@user).destroy
-  redirect './'
+  redirect '/'
 end
