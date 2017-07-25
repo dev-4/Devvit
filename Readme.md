@@ -2,7 +2,7 @@
 <p align="center">
     <img alt="Devvit" src="http://i.imgur.com/K1sp0tI.png" width="310.5">
 </p>
----
+
 # Installation and use:
 - Open **terminal** (Download **Git** if you don't have it)
 - **cd** into the Downtown Lover (**cd desktop**, **cd Devvit-master**)
