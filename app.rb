@@ -1,12 +1,12 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-require 'pg'
+require 'sqlite3'
 require	'gravtastic'
 require './models'
 
 enable :sessions
 set :sessions => true
-set :database, {adapter: 'postgresql', database: 'devvit'}
+set :database, {adapter: 'sqlite3', database: 'devvit.sqlite3'}
 
 get '/' do
 	if session[:user_id]

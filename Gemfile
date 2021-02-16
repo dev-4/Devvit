@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'pg'
+gem 'sqlite3'
 gem 'rake'
 gem 'sinatra'
 gem 'activerecord'
